@@ -24,8 +24,6 @@ async function heroAi(request, response) {
   try {
     const question = request.body.question;
 
-    console.log('question: ', question);
-
     const openAiResponse = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${question}`,
