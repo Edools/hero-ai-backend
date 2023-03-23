@@ -24,6 +24,8 @@ async function heroAi(request, response) {
   try {
     const question = request.body.question;
 
+    console.log('question: ', question);
+
     const openAiResponse = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${question}`,
@@ -38,6 +40,7 @@ async function heroAi(request, response) {
       bot: openAiResponse.data.choices[0].text,
     });
   } catch (error) {
+    console.log('ERROR: ', error);
     response.status(500).send(error || "Something went wrong");
   }
 }
