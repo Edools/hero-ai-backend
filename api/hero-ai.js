@@ -7,7 +7,7 @@ const openai = new OpenAIApi(configration);
 
 const allowCors = fn => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true)
-  res.setHeader('Access-Control-Allow-Origin', 'https://hero-ai-front.vercel.app/')
+  res.setHeader('Access-Control-Allow-Origin', 'https://hero-ai-front.vercel.app')
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST')
   res.setHeader(
     'Access-Control-Allow-Headers',
